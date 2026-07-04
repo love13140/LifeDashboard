@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2c2a28">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="儀表板">
+  <title>購物清單</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page page--sub page--shopping">
+    <nav class="back-nav">
+      <a href="../index.html" class="back-link">← 返回首頁</a>
+    </nav>
+
+    <header class="header header--sub">
+      <h1 class="header__title">購物清單</h1>
+      <p class="header__subtitle">列出待購項目，出門不遺漏</p>
+    </header>
+
+    <section class="panel">
+      <form id="shopping-form" class="shopping-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="shopping-name">想購買的物品</label>
+          <input
+            type="text"
+            id="shopping-name"
+            class="form-input"
+            placeholder="例如：蘋果、衛生紙"
+            autocomplete="off"
+            required
+          >
+        </div>
+        <button type="submit" class="btn btn--shopping">加入清單</button>
+      </form>
+    </section>
+
+    <section class="shopping-list-section">
+      <h2 class="section-title">待買清單</h2>
+      <ul id="shopping-list" class="shopping-list" aria-live="polite"></ul>
+      <p id="shopping-empty" class="empty-state">清單是空的，快加入第一項吧</p>
+    </section>
+  </div>
+
+  <script src="../register-sw.js" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>

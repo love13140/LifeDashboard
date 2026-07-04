@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2c2a28">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="儀表板">
+  <title>食物有效期限</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page page--sub">
+    <nav class="back-nav">
+      <a href="../index.html" class="back-link">← 返回首頁</a>
+    </nav>
+
+    <header class="header header--sub">
+      <h1 class="header__title">食物有效期限</h1>
+      <p class="header__subtitle">追蹤食材，減少浪費</p>
+    </header>
+
+    <section class="panel">
+      <form id="food-form" class="food-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="food-name">食物名稱</label>
+          <input
+            type="text"
+            id="food-name"
+            class="form-input"
+            placeholder="例如：牛奶、雞蛋"
+            autocomplete="off"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="food-expiry">有效期限</label>
+          <input type="date" id="food-expiry" class="form-input" required>
+        </div>
+        <button type="submit" class="btn btn--primary">新增</button>
+      </form>
+    </section>
+
+    <section class="food-list-section">
+      <h2 class="section-title">我的食物</h2>
+      <ul id="food-list" class="food-list" aria-live="polite"></ul>
+      <p id="food-empty" class="empty-state">還沒有新增任何食物</p>
+    </section>
+  </div>
+
+  <script src="../register-sw.js" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>

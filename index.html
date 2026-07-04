@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2c2a28">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="儀表板">
+  <meta name="description" content="個人生活管理：食物有效期限與購物清單">
+  <title>生活儀表板</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <p class="header__greeting">你好 👋</p>
+      <h1 class="header__title">生活儀表板</h1>
+      <p class="header__subtitle">整理日常，讓生活更輕鬆</p>
+    </header>
+
+    <main class="cards">
+      <a href="./food/index.html" class="card card--food">
+        <span class="card__icon" aria-hidden="true">🥗</span>
+        <div class="card__body">
+          <h2 class="card__title">食物有效期限</h2>
+          <p class="card__desc">記錄與追蹤食材，避免浪費</p>
+        </div>
+        <span class="card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="./shopping/index.html" class="card card--shopping">
+        <span class="card__icon" aria-hidden="true">🛒</span>
+        <div class="card__body">
+          <h2 class="card__title">購物清單</h2>
+          <p class="card__desc">列出待購項目，出門不遺漏</p>
+        </div>
+        <span class="card__arrow" aria-hidden="true">→</span>
+      </a>
+    </main>
+
+    <footer class="footer">
+      <p>個人生活管理 · 簡單好用</p>
+    </footer>
+  </div>
+  <script src="register-sw.js" defer></script>
+</body>
+</html>
