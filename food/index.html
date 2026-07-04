@@ -12,6 +12,22 @@
   <link rel="icon" href="../icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../icon-192.png">
   <link rel="stylesheet" href="../style.css">
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2c2a28">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="儀表板">
+  <title>食物有效期限</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon-192.png">
+  <link rel="stylesheet" href="../style.css">
+  <!-- 引入 Supabase 官方 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <div class="page page--sub">
@@ -41,7 +57,7 @@
           <label class="form-label" for="food-expiry">有效期限</label>
           <input type="date" id="food-expiry" class="form-input" required>
         </div>
-        <button type="submit" class="btn btn--primary">新增</button>
+        <button type="submit" id="btn-submit" class="btn btn--primary">新增</button>
       </form>
     </section>
 
